@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset=“UTF-8”>
+  <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>View Reports</title>
+</head>
+
+<body>
+  <header>
+    <div class="flex-container" style="justify-content:space-between;">
+       <h3>CYPRESS</h3>
+       <h3>City of Toronto</h3>
+    </div>
+    <hr>
+  </header>
+  
+  <div class="center">
+    <h3>Ranking of Current Reports</h3>
+    <h4>Vote on which problems are more important by clicking the "+1" button. Use the "-1" button to vote on a problem as less important.</h4>
+    
+    <label for="fname">Address:</label><br>
+    <field type="staticText" txt="$address" id="address"/><br>
+  
+    $scope.chosen="Utility failures"
+  
+    <label for="problem">Problem at site:</label><br>
+    <field type="staticText" txt="$problem" id="problem"/><br>
+    <label for="rank">Rank:</label><br>
+    <field type="staticText" txt="$rank" id="rank"/><br>
+    <!--- Code to retrieve and display reports --->
+    <button type="button">+1</button>
+    <button type="button">-1</button>
+    
+  </div>
+</body>
+
+</html>
