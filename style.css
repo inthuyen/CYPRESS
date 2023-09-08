@@ -1,0 +1,96 @@
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    overflow: auto;
+}
+   
+/* Front Page*/
+#front-page {
+    text-align: center;
+    padding: 20px;
+}
+
+#front-page h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+#front-page img {
+    max-width: 75%; /* Ensure the image doesn't exceed its container's width */
+    height: auto; /* Maintain image aspect ratio */
+    margin-top: 10px; /* Add some spacing above the image */
+}
+
+#front-page p {
+    font-size: 20px; /* Adjust the paragraph font size */
+    margin: 10px 0; /* Add spacing around the paragraph */
+}
+
+p {
+    text-align: center;
+}
+/* Button Styling */
+button {
+    background-color: #007acc; /* Blue background color */
+    color: white; /* Text color */
+    padding: 10px 20px;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #005fb3; /* Darker blue on hover */
+}
+
+.center-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Center the form and buttons */
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.form-container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.center-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Left-justify the checkboxes and labels within the checkbox container */
+.checkbox-container {
+    text-align: left;
+    margin-left: 20px; /* Add some left margin for spacing */
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 5px; /* Add some spacing between the checkbox and label */
+}

@@ -4,37 +4,22 @@
 <head>
   <meta charset=“UTF-8”>
   <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <title>CYPRESS-Portal</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>CYPRESS - Portal</title>
 </head>
 
 <body>
-  <header>
-    <div class="flex-container" style="justify-content:space-between;">
-       <h3>CYPRESS</h3>
-       <h3>City of Toronto</h3>
-    </div>
-    <hr>
-  </header>
-  
-  <div class="flex-container" style="justify-content:space-around;">
-    <div class="flex-container" style="float:left;flex-direction:column;align-items:stretch;">
-      <h4> Quick Links </h2>
-      <button type ="button"> <a href="registerp.php">Register</a> </button>
-      <button type ="button"> <a href="loginp.php">Login</a> </button>
-      <button type ="button"> <a href="profile.php">View Profile</a> </button>
-      <button type ="button"> <a href="submit_report.html">Report a Problem</a> </button>
-      <button type ="button"> <a href="allReports.php">View reports</a> </button>
-      <button type ="button"> <a href="suggestions.html">Suggest a Solution</a> </button>
-      <button type ="button"> <a href="vote.php">Voting</a> </button>
-      <button type ="button"> <a href="recommend.php">Tell a Friend</a> </button>
-      <button type ="button"> <a href="FAQ.html">FAQ</a> </button>
-      <button type ="button"> <a href="contact.html">Contact Us</a> </button>
-      <button type ="button"> <a href="survey.php">Exit</a> </button>
-    </div>
-    <img style="float:right;" src="Images/City1" class="imgsmall" />
-    <img style="float:right;" src="Images/City2" class="imgsmall" />
-    
+  <nav>
+    <a href="portal.html"><img src="media/toronto-logo.png" width="10%" height="5%" style="margin-left: 10px;"></a>
+  </nav>
+
+  <div class="button-container">
+    <button type="button" onclick="window.location.href='submit_report.html'">Report a Problem</button>
+    <button type="button" onclick="window.location.href='allReports.php'">View Reports</button>
+    <button type="button" onclick="window.location.href='suggestions.html'">Suggest a Solution</button>
+    <button type="button" onclick="window.location.href='vote.php'">Voting</button>
+    <button type="button" onclick="window.location.href='FAQ.html'">FAQ</button>
+    <button type="button" onclick="window.location.href='survey.html'">Exit</button>
   </div>
 </body>
 

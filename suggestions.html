@@ -4,18 +4,14 @@
 <head>
   <meta charset=“UTF-8”>
   <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <title>Suggest A Solution</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>CYPRESS - Suggest A Solution</title>
 </head>
 
 <body>
-  <header>
-    <div class="flex-container" style="justify-content:space-between;">
-       <h3>CYPRESS</h3>
-       <h3>City of Toronto</h3>
-    </div>
-    <hr>
-  </header>
+  <nav>
+    <a href="portal.html"><img src="media/toronto-logo.png" width="10%" height="5%" style="margin-left: 10px;"></a>
+  </nav>
   
   <div class="center">
     <h3>Suggestions</h3>
@@ -25,8 +21,8 @@
     <form>
       <textarea id="suggestion" name="suggestion">Enter your suggestion here.</textarea> <br>
       <div class="flex-container" style="justify-content: center;">
-        <button type="submit"> <a href="portal.html">Submit</a> </button>
-        <button type="button"> <a href="portal.html">Return to portal</a> </button>
+        <button type="submit" onclick="window.location.href='portal.html'">Submit</button>
+        <button type="button" onclick="window.location.href='portal.html'">Return to Portal</button>
       </div>
     </form>
     
