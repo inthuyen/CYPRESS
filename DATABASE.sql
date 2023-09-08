@@ -13,4 +13,11 @@ CREATE TABLE suggestions (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE surveys (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    rating INT,
+    feedback TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 SHOW TABLES;
