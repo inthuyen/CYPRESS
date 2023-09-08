@@ -1,46 +1,31 @@
-<!DOCTYPE html>
-<html lang="en-US">
-
 <?php
-  $reports = file('reports.txt', FILE_IGNORE_NEW_LINES);
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+include 'connection.php';
+
+// Query to retrieve reports from the database
+$sql = "SELECT * FROM reports";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // Output the table header
+    echo '<table>';
+    echo '<tr><th>ID</th><th>Address</th><th>Problems</th><th>Created At</th></tr>';
+
+    // Output data of each row
+    while ($row = $result->fetch_assoc()) {
+        echo '<tr>';
+        echo '<td>' . $row["id"] . '</td>';
+        echo '<td>' . $row["address"] . '</td>';
+        echo '<td>' . $row["problems"] . '</td>';
+        echo '<td>' . $row["created_at"] . '</td>';
+        echo '</tr>';
+    }
+    echo '</table>';
+} else {
+    echo "No reports found.";
+}
+
+$conn->close();
 ?>
-  
-<head>
-  <meta charset=“UTF-8”>
-  <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <title>View Reports</title>
-</head>
-
-<body>
-  <header>
-    <div class="flex-container" style="justify-content:space-between;">
-       <h3>CYPRESS</h3>
-       <h3>City of Toronto</h3>
-    </div>
-    <hr>
-  </header>
-  
-  <div class="center">
-    <h4>All Currently Unresolved Reports</h4>
-    
-    <!--- Code to retrieve and display reports --->
-    <?php
-      for ($x = 0; $x < count($reports); $x++)
-      {
-        echo "<div class='flex-container' style='justify-content:center'>";
-        echo "<p>". $reports[$x] ."</p>";
-        echo "<button type='button'><a href='edit_report.php'>Edit</a></button>";
-        echo "<button type='button'> <a href='delete.php'>Delete</a> </button>";
-        echo "</div>";
-      }
-    ?>
-    
-    <div class="flex-container" style="justify-content: center;">
-      <button type="button"> <a href="portal.html">Return to portal</a> </button>
-    </div>
-    
-  </div>
-</body>
-
-</html>

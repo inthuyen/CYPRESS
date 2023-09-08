@@ -1,52 +1,64 @@
 <!DOCTYPE html>
-<html lang="en-US" class="no-js">
+<html lang="en-US">
 
-<head>
-<link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
+  <head>
+    <meta charset=“UTF-8”>
+    <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>CYPRESS - Submit Report</title>
+  </head>
 
-<body>
-  <header>
-    <div class="flex-container" style="justify-content:space-between;">
-       <h3>CYPRESS</h3>
-       <h3>City of Toronto</h3>
-    </div>
-    <hr>
-  </header>
-  
-  <div class="center">
-    <form action="newReport.php" method="post" >
-      <label for="fname" style="font-weight: bold; font-size:20;">Address:</label><br>
-      <input type="text" id="address" name="address"><br>
-      
-      <p style="font-weight: bold; font-size:20;">PROBLEMS AT THE SITE:</p>
-      <input type="radio" id="utility" name="problem" ng-model="chosen" value="utility">
-      <label for="utility">Utility failures</label><br>
-      <input type="radio" id="pothole" name="problem" ng-model="chosen" value="pothole">
-      <label for="pothole">Potholes</label><br>
-      <input type="radio" id="vandalism" name="problem" ng-model="chosen" value="vandalism">
-      <label for="vandalism">City property vandalism</label><br>
-      <input type="radio" id="erosion" name="problem" ng-model="chosen" value="erosion">
-      <label for="erosion">Eroded streets</label><br>
-      <input type="radio" id="tree" name="problem" ng-model="chosen" value="tree">
-      <label for="tree">Tree collapse</label><br>
-      <input type="radio" id="flood" name="problem" ng-model="chosen" value="flood">
-      <label for="flood">Flooded streets</label><br>
-      <input type="radio" id="growth" name="problem" ng-model="chosen" value="growth">
-      <label for="growth">Mould and spore growth</label><br>
-      <input type="radio" id="roadblock" name="problem" ng-model="chosen" value="roadblock">
-      <label for="roadblock">Garbage or any other road-blocking objects</label><br>
-      
-      <div class="flex-container" style="justify-content:center">
-        <button type="submit"> Submit Report </button>
-        <button type="button"> <a href="portal.html">Cancel</a> </button>
-      </div>
-    </form>
-  
+  <body>
+    <nav>
+      <a href="portal.html"><img src="media/toronto-logo.png" width="10%" height="5%" style="margin-left: 10px;"></a>
+    </nav>
     
-  <div class="center">
-<br>
-<button type="button" class="faq"> <a href="FAQ.html">FAQ</a> </button>
-</body>
+    <div class="center">
+      <form action="newReport.php" method="POST">
+        <div class="form-container">
+          <label for="fname" style="font-weight: bold; font-size:20; justify-content: center;">Address:</label><br>
+          <input type="text" id="address" name="address"><br>
+          
+          <p style="font-weight: bold; font-size:20;">PROBLEMS AT THE SITE:</p>
+          <div class="checkbox-container">
+            <input type="checkbox" id="utility" name="problems[]" value="utility">
+            <label for="utility">Utility Failure</label><br>
+  
+            <input type="checkbox" id="pothole" name="problems[]" value="pothole">
+            <label for="pothole">Pothole</label><br>
+  
+            <input type="checkbox" id="vandalism" name="problems[]" value="vandalism">
+            <label for="vandalism">Vandalism</label><br>
+  
+            <input type="checkbox" id="erosion" name="problems[]" value="erosion">
+            <label for="erosion">Eroded Street</label><br>
+  
+            <input type="checkbox" id="tree" name="problems[]" value="tree">
+            <label for="tree">Collapsed Tree</label><br>
+  
+            <input type="checkbox" id="flood" name="problems[]" value="flood">
+            <label for="flood">Flooded Street</label><br>
+  
+            <input type="checkbox" id="growth" name="problems[]" value="growth">
+            <label for="growth">Mould</label><br>
+  
+            <input type="checkbox" id="roadblock" name="problems[]" value="roadblock">
+            <label for="roadblock">Roadblock</label><br>
+          </div>
+          
+        </div>
+        
+        <div class="flex-container" style="justify-content:center">
+          <button type="submit">Submit</button>
+          <button type="button" onclick="window.location.href='portal.html'">Cancel</button>
+        </div>
+      </form>
+    </div>
+      
+    <div class="center-buttons">
+      <br>
+      <button type="button" onclick="window.location.href='FAQ.html'">FAQ</button>
+    </div>
+  </body>
 
 </html>

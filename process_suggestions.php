@@ -4,16 +4,12 @@
     
     include 'connection.php';
 
-    $address = $_POST['address'];
-    $problems = $_POST['problems'];
-  
-    // Convert the array of selected problems into a comma-separated string
-    $problemStr = implode(', ', $problems);
+    $suggestion = $_POST["suggestions"];
 
     // Prepare and execute an SQL query to insert the data into your database
-    $sql = "INSERT INTO reports (address, problems) VALUES (?, ?)";
+    $sql = "INSERT INTO suggestions (suggestion) VALUES (?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ss", $address, $problemStr);
+    $stmt->bind_param("s", $suggestion);
 
     if ($stmt->execute()) {
         echo "Report submitted successfully.";
@@ -23,4 +19,5 @@
 
     $stmt->close();
     $conn->close();
+
 ?>
