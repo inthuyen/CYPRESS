@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CYPRESS - Survey</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 
@@ -13,32 +12,27 @@
             <a href="portal.html"><img src="media/toronto-logo.png" width="10%" height="5%" style="margin-left: 10px;"></a>
           </nav>
     
-        <div class="row">
-            <div class="col-12 text-center">
-                <h1 class="mainHeads">CYPRESS Survey</h1>
-            </div>
+        <div class="flex-container">
+            <h1>CYPRESS Survey</h1>
         </div>
     
-        <div class="container">
-            <h6>
-                You are currently at the Cypress survey page. Please rate your experience and leave feedback below.
-            </h6>
+        <div class="flex-container">
+            <h4>You are currently at the Cypress survey page. Please rate your experience and leave feedback below.</h4>
         </div>
     
-        <div class="container">
-            <div class="col-xs">
-            <form action="process_survey.php" method="post" name="survey_form">
+        <div class="flex-container">
+            <form action="process_survey.php" method="POST">
 
                 <label for="customRange2">Were you satisfied with the service? Use the slider to leave your rating.</label>
-                <input type="range" class="custom-range" min="0" max="5" id="customRange2">
+                <input type="range" class="custom-range" min="0" max="5" id="customRange2" name="rating">
                 
                 <div class="form-group">
                     <label for="text">Feedback:</label>
-                    <input type="text" class="form-control" id="Feedback">
+                    <input type="text" class="form-control" id="Feedback" name="feedback">
                     <small id="messageHelp" class="form-text text-muted">Feedback is not required.</small>
                 </div>
     
-                <button type="submit" class="btn btn-danger"> <a href="logout.html">Submit</a> </button>
+                <button type="submit"> <a href="logout.html">Submit</a> </button>
             </form> 
             </div>
         </div>
