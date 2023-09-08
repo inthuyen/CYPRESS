@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<head>
-  <meta charset=“UTF-8”>
-  <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <title>CYPRESS - Portal</title>
-</head>
+  <head>
+    <meta charset=“UTF-8”>
+    <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>CYPRESS - Portal</title>
+  </head>
 
-<body>
-  <nav>
-    <a href="portal.html"><img src="media/toronto-logo.png" width="10%" height="5%" style="margin-left: 10px;"></a>
-  </nav>
+  <body>
+    <nav>
+      <a href="portal.html"><img src="media/toronto-logo.png" width="10%" height="5%" style="margin-left: 10px;"></a>
+    </nav>
 
     <div class="center">
         <h4>All Currently Unresolved Reports</h4>
         <div id="reports">
-            <!-- This is where you will display the reports from PHP -->
+          <script src="view_reports.js"></script>
         </div>
     </div>
-   
+  
     <div class="center-buttons">
         <br>
         <button type="button" onclick="window.location.href='portal.html'">Return to Portal</button>
     </div>
-</body>
+
+    
+
+  </body>
 </html>
