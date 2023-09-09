@@ -20,7 +20,7 @@ nav {
 }
 
 .logo img {
-    width: 10%;
+    width: 15%;
     vertical-align: middle;
     display: inline-block;
 }
@@ -35,12 +35,13 @@ nav {
 
 .nav-item a {
     display: inline-block;
-    padding: 10px 15px;
+    padding: 18px 18px;
     text-decoration: none;
     color: black;
     vertical-align: middle;
     text-align: center;
-    width: 4em;
+    font-size: 18px;
+    width: 3.5em;
 }
 
 .nav-item:hover {
