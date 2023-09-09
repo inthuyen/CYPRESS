@@ -1,18 +1,57 @@
 body {
+    margin: 0;
+    padding: 0;
     background-color: #f2f2f2;
-    color: #333;
-    font-family: Arial, sans-serif;
 }
 
+/* Navigation Bar Styling */
 nav {
+    width: 100%;
+    background-color: white ;
+    padding-left: 10px;
+    padding-right: 10px;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
-    overflow: auto;
+    align-items: center;
 }
-   
-/* Front Page*/
+
+.logo {
+    display: inline-block;
+}
+
+.logo img {
+    width: 10%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-item{
+    list-style: none;
+}
+
+.nav-item a {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+    vertical-align: middle;
+    text-align: center;
+    width: 4em;
+}
+
+.nav-item:hover {
+    background-color: #007acc;
+}
+  
+.nav-item:hover a {
+    color: white;
+}
+
+/* Welcome Page Styling*/
 #front-page {
     text-align: center;
     padding: 20px;
