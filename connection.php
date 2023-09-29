@@ -1,7 +1,7 @@
 <?php
-    $servername = "localhost";
+    $servername = "mysql";
     $username = "root";
-    $password = "";
+    $password = "yourpassword";
     $dbname = "cypress";
     $port = 3306; // Default MySQL port
 
