@@ -1,4 +1,4 @@
-USE [YOUR_DATABASE];
+USE cypress;
 
 CREATE TABLE reports (
     id INT AUTO_INCREMENT PRIMARY KEY,
