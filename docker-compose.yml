@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "9080:80"
+      - "9000:80"
     volumes:
       - ./:/var/www/html
     depends_on:
@@ -20,7 +20,7 @@ services:
     environment:
       - PMA_ARBITRARY=1
     ports:
-      - "8080:80"
+      - "9001:80"
     networks:
       - mynetwork
     depends_on:
