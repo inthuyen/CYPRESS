@@ -6,7 +6,8 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background: linear-gradient(#E0E0E0, #fff);
+    /* background: linear-gradient(#E0E0E0, #fff); */
+    background: linear-gradient(#f0ece4, #fff);
 }
 
 /* Navigation Bar Styling */

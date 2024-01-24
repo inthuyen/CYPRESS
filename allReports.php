@@ -10,7 +10,7 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // Output the table header
-    echo '<table>';
+    echo '<table border='1' style="border-collapse: collapse; border: 1px solid black;">';
     echo '<tr><th>ID</th><th>Address</th><th>Problems</th><th>Created At</th></tr>';
 
     // Output data of each row
